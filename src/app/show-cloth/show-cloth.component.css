@@ -20,7 +20,7 @@
 }
 
 .cloth-container {
-  background: url(t-shirt.png);
+  background: url(app/img/t-shirt.png);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 500px;
