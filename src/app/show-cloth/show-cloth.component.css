@@ -1,16 +1,39 @@
-.text {
+.frontName {
   z-index: 100;
   position: absolute;
-  color: white;
-  font-size: 24px;
+  color: #ff23f3;
+  font-size: 30px;
   font-weight: bold;
-  font-family: "Yu Gothic";
-  left: 300px;
-  top: 200px;
+  top: 17%;
+  right: 32%;
   writing-mode: vertical-rl;
 }
 
-.cloth-container{
-    width: 500px;
-    height: 500px;
+.frontNum {
+  z-index: 100;
+  position: absolute;
+  color: #ff23f3;
+  font-size: 30px;
+  font-weight: bold;
+  top: 25%;
+  right: 47%;
+}
+
+.cloth-container {
+  background: url(t-shirt.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 418px;
+  float: left;
+  border: 1px solid cornflowerblue;
+  position: relative;
+}
+
+.cloth-parameter {
+  width: 300px;
+  height: 300px;
+  border: 1px solid cornflowerblue;
+  margin-left: 0;
+  float: left;
 }

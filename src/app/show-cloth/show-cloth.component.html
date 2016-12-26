@@ -1,9 +1,34 @@
-<p>
-  show-cloth works!
-</p>
-<div class="container cloth-container">
-  <img src="t-shirt.png" alt="The photo is gone" style="background: blue">
-  <p class="text">
-    媽我在這
-  </p>
+<div>
+  <div class="section">
+    <div class="container cloth-parameter">
+      <div class="row">
+        <label for="frontName">正面名稱</label>
+        <input type="text" name="frontName" value="frontName" [(ngModel)]="frontName">
+      </div>
+      <div class="row">
+        <label for="frontNum">號碼</label>
+        <input type="text" name="frontNum" value="number" [(ngModel)]="number">
+      </div>
+      <div>
+        <label for="selectFont">選擇字體</label>
+        <select name="selectFont" [(ngModel)]="selectFont">
+          <option *ngFor="let item of fontArray" [value]="item">{{item}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="clothColor">選擇衣服顏色</label>
+        <input type="color" name="clothColor" value="clothColor" [(ngModel)]="clothColor">
+      </div>
+      <div>
+        <label for="textColor">選擇字體顏色</label>
+        <input type="color" name="textColor" value="textColor" [(ngModel)]="textColor">
+      </div>
+    </div>
+    <div class="cloth-container" [ngStyle]="{'background-color': clothColor}">
+      <p class="frontName" 
+        [ngStyle]="{ color: textColor, 'font-family': selectFont }">{{frontName}}</p>
+      <p class="frontNum" 
+        [ngStyle]="{ color: textColor, 'font-family': selectFont }">{{number}}</p>
+    </div>
+  </div>
 </div>
